@@ -453,6 +453,11 @@ template {
     display: none;
 }
 
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 a {
     text-decoration: none;
     color: #fff;
@@ -469,6 +474,36 @@ ul, li {
     margin: 0 auto;
 }
 
+.btn {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 38px;
+    position: relative;
+}
+
+.btn span {
+    padding: 11px 7px 11px 15px;
+    background-color: #fff;
+    color: #000;
+    margin-right: 6px;
+}
+
+.btn:after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 11px;
+    background-image: url("../img/right.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 50%;
+    right: -22px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 .header {
     padding-top: 40px;
     background-color: #000;
@@ -481,10 +516,6 @@ ul, li {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-}
-
-.header__logo {
-    width: 140px;
 }
 
 .header__menu {
@@ -502,4 +533,53 @@ ul, li {
 .header__menu-link {
     font-weight: 400;
     line-height: 20px;
+}
+
+.header__menu-link:hover {
+    border-top: 2px dashed #fff;
+}
+
+.promo {
+    height: 1350px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 60%, 100% 100%, 0 60%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 60%, 100% 100%, 0 60%);
+    background-color: #000;
+}
+
+.promo__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.promo__text {
+    -ms-flex-item-align: center;
+    align-self: center;
+    text-align: center;
+    -webkit-transform: translateY(-30%);
+    -ms-transform: translateY(-30%);
+    transform: translateY(-30%);
+}
+
+.promo__title {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 65px;
+    letter-spacing: -1.5px;
+}
+
+.promo__descr {
+    max-width: 469px;
+    margin: 50px auto 40px auto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.promo__btn {
+    color: #fff;
+    line-height: 38px;
 }
