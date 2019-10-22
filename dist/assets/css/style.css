@@ -628,3 +628,52 @@ ul, li {
     font-weight: 400;
     line-height: 26px;
 }
+
+.about {
+    padding-top: 77px;
+    position: relative;
+}
+
+.about__square {
+    width: 657px;
+    height: 640px;
+    background-color: #000;
+    position: absolute;
+}
+
+.about__block {
+    padding-top: 101px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.about__skills {
+    width: 500px;
+    height: 437px;
+    -webkit-box-shadow: 0 0 4px 1px #656565;
+    box-shadow: 0 0 4px 1px #656565;
+    background-color: #fff;
+}
+
+.about__text {
+    -ms-flex-item-align: center;
+    align-self: center;
+    width: 587px;
+}
+
+.about__title {
+    color: #000;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.about__descr {
+    color: #585858;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
