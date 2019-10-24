@@ -1059,3 +1059,112 @@ ul, li {
     line-height: 24px;
     text-transform: uppercase;
 }
+
+.client {
+    padding-top: 172px;
+    padding-bottom: 185px;
+    background-color: #000;
+}
+
+.client__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.client__box {
+    max-width: 400px;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+.client__box-title {
+    font-size: 30px;
+    letter-spacing: 0.6px;
+}
+
+.client__box-subtitle {
+    margin-top: 30px;
+    color: #949494;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.32px;
+}
+
+.client__box-feedback {
+    margin-top: 49px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.client__box-feedback__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.client__box-name {
+    color: #282828;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.95px;
+}
+
+.client__box-job {
+    color: #535353;
+    font-weight: 400;
+    line-height: 25.95px;
+}
+
+.client__box2 {
+    padding: 58px 71px;
+    width: 570px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.client__box2-text {
+    color: #646464;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.client__slider-item {
+    position: relative;
+}
+
+.dots__slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 86px;
+    position: absolute;
+    bottom: -10px;
+    left: 75%;
+    z-index: 2;
+    -webkit-transform: translateX(-25%);
+    -ms-transform: translateX(-25%);
+    transform: translateX(-25%);
+}
+
+.dots__slider-item {
+    width: 27px;
+    height: 7px;
+    background-color: #b2b2b2;
+}
