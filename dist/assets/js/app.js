@@ -3027,5 +3027,13 @@ $(function(){
         asNavFor: '.client__slider',
         focusOnSelect: true
     });
+    $('.partners__slider').slick({
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 4,
+        arrows: true,
+        prevArrow: '<img class="slider-arrow__left" src="assets/img/double-left.svg">',
+        nextArrow: '<img class="slider-arrow__right"  src="assets/img/double-right.svg">'  
+    });
 
 });
