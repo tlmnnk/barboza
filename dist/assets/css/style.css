@@ -1142,25 +1142,19 @@ ul, li {
     line-height: 26px;
 }
 
-.client__slider-item {
-    position: relative;
-}
-
-.dots__slider {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 86px;
+.dots__slider-block {
+    width: 90px;
     position: absolute;
-    bottom: -10px;
+    bottom: -20px;
     left: 75%;
     z-index: 2;
     -webkit-transform: translateX(-25%);
     -ms-transform: translateX(-25%);
     transform: translateX(-25%);
+}
+
+.dots__slider .slick-current .dots__slider-item {
+    background-color: #f1f1f1;
 }
 
 .dots__slider-item {

@@ -43,18 +43,20 @@
             color: #646464
             font-weight: 400
             line-height: 26px
-    &__slider-item
-        position: relative
-.dots__slider
-    display: flex
-    justify-content: space-between
-    width: 86px
+
+.dots__slider-block
+    width: 90px
     position: absolute
-    bottom: -10px
+    bottom: -20px
     left: 75%
     z-index: 2
     transform: translateX(-25%)
-    &-item
-        width: 27px
-        height: 7px
-        background-color: #b2b2b2
+.dots__slider
+    .slick-current
+        .dots__slider-item
+            background-color: #f1f1f1
+
+.dots__slider-item
+    width: 27px
+    height: 7px
+    background-color: #b2b2b2

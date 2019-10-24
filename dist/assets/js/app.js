@@ -3020,9 +3020,12 @@ $(function(){
         asNavFor: '.dots__slider'
     });
     $('.dots__slider').slick({
+        infinite: true,
+        autoplay: true,
         slidesToShow: 3,
         arrows: false,
-        asNavFor: '.client__slider'
+        asNavFor: '.client__slider',
+        focusOnSelect: true
     });
 
 });
