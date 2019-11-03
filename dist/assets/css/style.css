@@ -475,6 +475,7 @@ ul, li {
 
 .container {
     max-width: 1200px;
+    padding: 0 10px;
     margin: 0 auto;
     position: relative;
 }
@@ -540,8 +541,80 @@ ul, li {
     line-height: 20px;
 }
 
-.header__menu-link:hover {
-    border-top: 2px dashed #fff;
+.header__hamburger {
+    display: none;
+    width: 30px;
+}
+
+.header__hamburger-span {
+    content: '';
+    height: 3px;
+    margin-bottom: 8px;
+    display: block;
+    background-color: #fff;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    -o-transition: transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.header__hamburger-span--active .header__hamburger-span:first-child {
+    -webkit-transform: translateY(12px) rotate(135deg);
+    -ms-transform: translateY(12px) rotate(135deg);
+    transform: translateY(12px) rotate(135deg);
+}
+
+.header__hamburger-span--active .header__hamburger-span:last-child {
+    -webkit-transform: translateY(-12px) rotate(-135deg);
+    -ms-transform: translateY(-12px) rotate(-135deg);
+    transform: translateY(-12px) rotate(-135deg);
+}
+
+.header__hamburger-span--active .header__hamburger-span:nth-child(2) {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+@media (max-width: 768px) {
+    .header__menu {
+        display: none;
+    }
+
+    .header__menu-link {
+        padding: 40px 70px;
+    }
+
+    .header__menu--open {
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+        font-size: 44px;
+        width: 75%;
+        height: 100vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: absolute;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background-color: #662738;
+        opacity: .8;
+        top: -40px;
+        right: 0;
+    }
+
+    .header__hamburger {
+        display: block;
+    }
 }
 
 .promo {
@@ -798,6 +871,18 @@ ul, li {
     font-weight: 400;
     line-height: 25px;
     max-width: 317px;
+}
+
+@media (max-width: 768px) {
+    .services__block {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .services__block-item {
+        padding: 15px 14px;
+    }
 }
 
 .portfolio {

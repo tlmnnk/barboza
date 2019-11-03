@@ -3033,7 +3033,12 @@ $(function(){
         slidesToShow: 4,
         arrows: true,
         prevArrow: '<img class="slider-arrow__left" src="assets/img/double-left.svg">',
-        nextArrow: '<img class="slider-arrow__right"  src="assets/img/double-right.svg">'  
+        nextArrow: '<img class="slider-arrow__right"  src="assets/img/double-right.svg">'
     });
+
+        $(".header__hamburger").click(function(){
+            $(".header__menu").toggleClass('header__menu--open');
+            $(this).toggleClass('header__hamburger-span--active');
+        });
 
 });

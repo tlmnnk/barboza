@@ -9,8 +9,49 @@
         align-self: center
         display: flex
         justify-content: space-between
+
         &-link
             font-weight: 400
             line-height: 20px
-            &:hover
-                border-top: 2px dashed #fff
+
+    &__hamburger
+        display: none
+        width: 30px
+        &-span
+            content: ''
+            height: 3px
+            margin-bottom: 8px
+            display: block
+            background-color: #fff
+            transition: transform .5s ease
+            &--active
+                .header__hamburger-span:first-child
+                    transform: translateY(12px) rotate(135deg)
+                .header__hamburger-span:last-child
+                    transform: translateY(-12px) rotate(-135deg)
+                .header__hamburger-span:nth-child(2)
+                    transform: scale(0)
+
+@media (max-width: 768px)
+    .header
+        &__menu
+            display: none
+            &-link
+                padding: 40px 70px
+            &--open
+                transition: all 1s ease    
+                font-size: 44px
+                width: 75%
+                height: 100vh
+                display: flex
+                justify-content: space-around
+                align-items: center
+                position: absolute
+                flex-direction: column
+                background-color: #662738
+                opacity: .8
+                top: -40px
+                right: 0
+
+    .header__hamburger
+            display: block
