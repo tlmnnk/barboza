@@ -537,8 +537,16 @@ ul, li {
 }
 
 .header__menu-link {
+    color: #9e9c9c;
+    -webkit-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
     font-weight: 400;
     line-height: 20px;
+}
+
+.header__menu-link:hover {
+    color: #fff;
 }
 
 .header__hamburger {
@@ -557,6 +565,10 @@ ul, li {
     -o-transition: transform .5s ease;
     transition: transform .5s ease;
     transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.header__hamburger-span:last-child {
+    margin-bottom: 0;
 }
 
 .header__hamburger-span--active .header__hamburger-span:first-child {
@@ -607,13 +619,15 @@ ul, li {
         -ms-flex-direction: column;
         flex-direction: column;
         background-color: #662738;
-        opacity: .8;
+        opacity: .9;
         top: -40px;
         right: 0;
+        z-index: 1;
     }
 
     .header__hamburger {
         display: block;
+        z-index: 2;
     }
 }
 
@@ -680,6 +694,8 @@ ul, li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     position: absolute;
     left: 50%;
     bottom: 50px;
@@ -709,6 +725,58 @@ ul, li {
     color: #585858;
     font-weight: 400;
     line-height: 26px;
+}
+
+@media (max-width: 768px) {
+    .promo {
+        height: 900px;
+    }
+
+    .promo__field {
+        bottom: -10px;
+    }
+
+    .promo__field-item {
+        padding: 1.6%;
+        margin: 10px;
+    }
+
+    .promo__title {
+        font-size: 42px;
+        line-height: 45px;
+    }
+
+    .promo__descr {
+        margin: 6px auto 7px;
+    }
+}
+
+@media (max-width: 576px) {
+    .promo__title {
+        font-size: 28px;
+        line-height: 29px;
+    }
+
+    .promo__descr {
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo__field {
+        opacity: .5;
+    }
+
+    .promo__block {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .promo__text {
+        margin-top: 65px;
+    }
 }
 
 .about {
@@ -858,6 +926,7 @@ ul, li {
     padding: 30px 28px;
     -webkit-box-shadow: 0 0 9px rgba(73, 73, 73, 0.4);
     box-shadow: 0 0 9px rgba(73, 73, 73, 0.4);
+    text-align: center;
 }
 
 .services__block-title {

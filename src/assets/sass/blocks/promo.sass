@@ -37,6 +37,7 @@
     &__field
         width: 100%
         display: flex
+        flex-wrap: wrap
         position: absolute
         left: 50%
         bottom: 50px
@@ -56,3 +57,35 @@
             color: #585858
             font-weight: 400
             line-height: 26px
+
+@media (max-width: 768px)
+    .promo
+        height: 900px
+        &__field
+            bottom: -10px
+            &-item
+                padding: 1.6%
+                margin: 10px
+        &__text
+
+        &__title
+            font-size: 42px
+            line-height: 45px
+        &__descr
+            margin: 6px auto 7px
+@media (max-width: 576px)
+    .promo
+
+        &__title
+            font-size: 28px
+            line-height: 29px
+        &__descr
+            line-height: 20px
+@media (max-width: 480px)
+    .promo
+        &__field
+            opacity: .5
+        &__block
+            flex-direction: column
+        &__text
+            margin-top: 65px
