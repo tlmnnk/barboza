@@ -465,6 +465,7 @@ a {
 
 body {
     position: relative;
+    overflow-x: hidden;
 }
 
 ul, li {
@@ -631,14 +632,6 @@ ul, li {
 
 @media (max-width: 768px) {
     .header__menu {
-        display: none;
-    }
-
-    .header__menu-link {
-        padding: 40px 70px;
-    }
-
-    .header__menu--open {
         -webkit-transition: all 1s ease;
         -o-transition: all 1s ease;
         transition: all 1s ease;
@@ -662,7 +655,20 @@ ul, li {
         opacity: .9;
         top: -40px;
         right: 0;
-        z-index: 1;
+        z-index: 2;
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    .header__menu--open {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    .header__menu-link {
+        padding: 40px 70px;
     }
 
     .header__hamburger {
@@ -672,11 +678,11 @@ ul, li {
 }
 
 @media (max-width: 576px) {
-    .header__menu__menu {
+    .header__menu {
         display: none;
     }
 
-    .header__menu-link {
+    .header-link {
         padding: 20px;
     }
 }

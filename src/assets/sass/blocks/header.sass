@@ -18,7 +18,6 @@
             &:hover
                 color: #fff
 
-
     &__hamburger
         display: none
         width: 30px
@@ -40,27 +39,31 @@
                 .header__hamburger-span:nth-child(2)
                     transform: scale(0)
 
-@media (max-width: 768px)
+@media (max-width: 768px) 
+
     .header
         &__menu
-            display: none
+            transition: all 1s ease 
+            font-size: 44px
+            height: 100vh
+            width: 75%
+            display: flex
+            justify-content: space-around
+            align-items: center
+            position: absolute
+            flex-direction: column
+            background-color: #000
+            opacity: .9
+            top: -40px
+            right: 0
+            z-index: 2
+            transform: translateX(100%)
+            &--open
+                transform: translateX(0)
             &-link
                 padding: 40px 70px
-            &--open
-                transition: all 1s ease
-                font-size: 44px
-                height: 100vh
-                width: 75%
-                display: flex
-                justify-content: space-around
-                align-items: center
-                position: absolute
-                flex-direction: column
-                background-color: #000
-                opacity: .9
-                top: -40px
-                right: 0
-                z-index: 1
+            
+        
                 
     
     .header__hamburger
@@ -68,7 +71,7 @@
             z-index: 2
 
 @media (max-width: 576px)
-    .header__menu
+    .header
         &__menu
             display: none
         &-link
