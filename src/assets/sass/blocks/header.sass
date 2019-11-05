@@ -49,18 +49,27 @@
             &--open
                 transition: all 1s ease
                 font-size: 44px
-                width: 75%
                 height: 100vh
+                width: 75%
                 display: flex
                 justify-content: space-around
                 align-items: center
                 position: absolute
                 flex-direction: column
-                background-color: #662738
+                background-color: #000
                 opacity: .9
                 top: -40px
                 right: 0
                 z-index: 1
+                
+    
     .header__hamburger
             display: block
             z-index: 2
+
+@media (max-width: 576px)
+    .header__menu
+        &__menu
+            display: none
+        &-link
+            padding: 20px

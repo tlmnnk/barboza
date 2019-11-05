@@ -86,6 +86,7 @@ function css() {
         .pipe(dest(path.build.css))
         .pipe(cssnano({
             zindex: false,
+            reduceIdents: false,
             discardComments: {
                 removeAll: true
             }

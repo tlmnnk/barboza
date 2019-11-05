@@ -480,6 +480,46 @@ ul, li {
     position: relative;
 }
 
+@-webkit-keyframes menuOpen {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes menuOpen {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+@-webkit-keyframes menuClose {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes menuClose {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
 .btn {
     font-size: 15px;
     font-weight: 500;
@@ -603,8 +643,8 @@ ul, li {
         -o-transition: all 1s ease;
         transition: all 1s ease;
         font-size: 44px;
-        width: 75%;
         height: 100vh;
+        width: 75%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -618,7 +658,7 @@ ul, li {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        background-color: #662738;
+        background-color: #000;
         opacity: .9;
         top: -40px;
         right: 0;
@@ -628,6 +668,16 @@ ul, li {
     .header__hamburger {
         display: block;
         z-index: 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .header__menu__menu {
+        display: none;
+    }
+
+    .header__menu-link {
+        padding: 20px;
     }
 }
 
@@ -694,8 +744,6 @@ ul, li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     position: absolute;
     left: 50%;
     bottom: 50px;
@@ -727,18 +775,19 @@ ul, li {
     line-height: 26px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .promo {
         height: 900px;
     }
 
     .promo__field {
-        bottom: -10px;
+        bottom: 50px;
     }
+}
 
-    .promo__field-item {
-        padding: 1.6%;
-        margin: 10px;
+@media (max-width: 768px) {
+    .promo__field {
+        bottom: 25px;
     }
 
     .promo__title {
@@ -752,13 +801,22 @@ ul, li {
 }
 
 @media (max-width: 576px) {
+    .promo__field {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .promo__field-item {
+        padding: 1.666%;
+    }
+
     .promo__title {
         font-size: 28px;
         line-height: 29px;
     }
 
     .promo__descr {
-        line-height: 20px;
+        line-height: 16px;
     }
 }
 
@@ -821,6 +879,7 @@ ul, li {
 }
 
 .about__text {
+    padding: 0 10px;
     -ms-flex-item-align: center;
     align-self: center;
     width: 589px;
@@ -880,6 +939,12 @@ ul, li {
     border-radius: 50%;
     bottom: -45px;
     left: 15px;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding-top: 40px;
+    }
 }
 
 .services {

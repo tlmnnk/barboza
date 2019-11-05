@@ -3037,7 +3037,7 @@ $(function(){
     });
 
         $(".header__hamburger").click(function(){
-            $(".header__menu").toggleClass('header__menu--open');
+            $(".header__menu").fadeToggle().toggleClass('header__menu--open');
             $(this).toggleClass('header__hamburger-span--active');
         });
 
