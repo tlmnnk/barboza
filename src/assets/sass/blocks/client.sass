@@ -36,7 +36,7 @@
             line-height: 25.95px
     &__box2
         padding: 58px 71px
-        width: 570px
+        max-width: 570px
         background-color: #fff
         border-radius: 20px
         &-text
@@ -60,3 +60,15 @@
     width: 27px
     height: 7px
     background-color: #b2b2b2
+
+@media ( max-width: 767px)
+    .client
+        padding-top: 70px
+    .client__content
+        flex-direction: column
+        justify-content: center
+    .client__box2
+        max-width: 500px
+        padding: 35px 18px
+        margin: 0 auto
+    .dots__slider-block

@@ -3033,7 +3033,30 @@ $(function(){
         slidesToShow: 4,
         arrows: true,
         prevArrow: '<img class="slider-arrow__left" src="assets/img/double-left.svg">',
-        nextArrow: '<img class="slider-arrow__right"  src="assets/img/double-right.svg">'
+        nextArrow: '<img class="slider-arrow__right"  src="assets/img/double-right.svg">',
+        responsive: [
+            {
+              breakpoint: 1324,
+              settings: {
+                slidesToShow: 3,
+                arrows: false
+              }
+            },
+            {
+              breakpoint: 860,
+              settings: {
+                slidesToShow: 2,
+                arrows: false
+              }
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                  slidesToShow: 1,
+                  arrows: false
+                }
+              }
+        ]
     });
 
      //Smooth Scrolling Using Navigation Menu
