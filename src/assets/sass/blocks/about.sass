@@ -21,10 +21,59 @@
         display: flex
         justify-content: space-between
     &__skills
+        padding: 4.3%
         width: 500px
         height: 437px
         box-shadow: 0 0 4px 1px #656565
         background-color: #fff
+        color: #000
+
+        &-block
+            position: relative
+            margin-top: 30px
+            display: flex
+            justify-content: space-between
+        &-title
+            font-size: 24px
+            line-height: 34px
+        &-name
+            width: 120px
+            font-size: 16px
+            line-height: 26px
+            
+        &-procent
+            font-size: 12px  
+            z-index: 1
+        &-round
+            height: 35px
+            width: 35px
+            border-radius: 50%
+            background-color: #f7f7f7
+            top: 0
+            right: 0
+            position: absolute
+            transform: translate(10%, -35%)
+        &-bar
+            height: 10px
+            background-color: #f7f7f7
+            border-radius: 5px
+            position: relative
+            &__inner
+                height: 100%
+                position: absolute
+                border-radius: 5px
+                background-color: #9d9d9d
+                top: 0
+                left: 0
+                &--html
+                    width: 80%
+                &--css
+                    width: 85%
+                &--javascript
+                    width: 95%
+                &--ux
+                    width: 90%
+
     &__text
         padding: 0 10px
         align-self: center
