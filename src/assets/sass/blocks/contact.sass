@@ -36,6 +36,48 @@
 
     &__form
         padding: 69px 32px 58px
-        width: 736px
         height: 537px
         background-color: #0c0c0c
+        flex-grow: 1
+        &-block
+            display: flex
+            justify-content: space-between
+        &-name
+            flex-basis: 46% 
+            padding: 18px 0 19px 2.5%
+            background-color: #1c1c1c
+            border: none
+            width: 100%
+            
+        &-phone
+            padding: 18px 0 19px 21px
+            margin-top: 30px
+            display: block
+            width: 100%
+            background-color: #1c1c1c
+            border: none
+        &-area
+            padding: 18px 0 19px 21px
+            margin-top: 30px
+            min-height: 170px
+            display: block
+            width: 100%
+            background-color: #1c1c1c
+            border: none
+            resize: none
+        &-btn
+            margin-top: 30px
+            padding: 16px 29px
+            color: #fff
+            line-height: 24px
+            background-color: #000
+            border: none
+            cursor: pointer
+
+    @media ( max-width: 767px )
+        .contact__info
+            max-width: 450px
+        .contact-block
+            flex-direction: column
+        .contact__info-text
+                margin-top: 0px
